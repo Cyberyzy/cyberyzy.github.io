@@ -9,6 +9,11 @@ on:
       - synchronize
       - reopened
   workflow_call:
+  # 允许 job 克隆 repo 并创建一个 page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
